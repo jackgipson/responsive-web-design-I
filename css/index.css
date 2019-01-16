@@ -80,7 +80,7 @@ header {
     border: 1px solid blue;
     display: flex;
     justify-content: space-between
-    
+
 }
 
 nav {
@@ -99,12 +99,69 @@ nav a {
     border: 1px solid green;
     width: 100%;
     justify-content: center;
-    align-items: flex-end; 
+    /* align-items: flex-end;  */
 }
 
-header .logo {
+.logo {
     display: flex;
     border: 1px solid purple;
+    /* align-items: baseline; */
    
 
+}
+
+.contents {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    margin-bottom: 60px;
+}
+
+.index {
+    
+    font-size: 8rem;
+    margin-left: 50%;
+    margin-top: 50px;
+    
+}
+
+.btn {
+    background-color: white;
+    border: 1px solid black;
+    color: black;
+    padding: 15px 32px;
+    text-decoration: none;
+	display: flex;
+    font-size: 16px;
+	cursor: pointer;
+	height: 32px;
+	width: 53%;
+	justify-content: center;
+    align-items: center;
+    margin-left: 78%;
+}
+
+hr {
+  
+}
+
+.top-content {
+   margin-top: 20px;
+   display: flex;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+.middle-img {
+    width: 100%;
+}
+
+.card, .card2, .card4, .card5 {
+    font-size: 1.6rem;
+}
+
+.botom-content {
+    display: flex;
 }
