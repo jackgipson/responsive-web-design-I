@@ -1,4 +1,4 @@
-/* Use your own code or past solution for Great Idea Web Page CSS here! */
+
 /* Use your own code or past solution for Great Idea Web Page CSS here! */
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -54,14 +54,9 @@ table {
     box-sizing: border-box;
 }
 
-html {
-    font-size: 62.5%;
-}
-
 html, body {
     height: 100%;
     font-family: 'Titillium Web', sans-serif;
-    
 }
 
 h1, h2, h3, h4, h5 {
@@ -70,63 +65,128 @@ h1, h2, h3, h4, h5 {
     margin-bottom: 15px;
 }
 
-.container {
-    margin: 0 auto;
-    width: 50%;
-    margin-top: 20px;
-}
-
-header {
-    border: 1px solid blue;
-    display: flex;
-    justify-content: space-between
-
+/* Copy and paste your work from yesterday here and start to refactor into flexbox */
+h1, .services {
+	font-size: 30px;
+	margin-top: 5%;
 }
 
 nav {
-    display: flex; 
-    font-size: 1.6rem;
-    border: 1px solid red;
-    width: 80%;
-    /* justify-content: center; */
-  
+	padding: 30px 0;
+	display: flex;
 }
 
 nav a {
-    display: flex;
-    text-decoration: none;
-    color: #CECBCA;
-    border: 1px solid green;
-    width: 100%;
-    justify-content: center;
-    /* align-items: flex-end;  */
-}
-
-.logo {
-    display: flex;
-    border: 1px solid purple;
-    /* align-items: baseline; */
-   
-
-}
-
-.contents {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 50px;
-    margin-bottom: 60px;
+	margin-right: 60px;
+	text-decoration: none;
+	color: #999;
+	display: flex;
+	width: 80px;
+	justify-content: center;
 }
 
 .index {
-    
-    font-size: 8rem;
-    margin-left: 50%;
-    margin-top: 50px;
-    
+	font-size: 80px;
+	text-align: center;
+}
+
+h2 {
+	font-size: 20px;
+}
+
+p {
+	font-size: 18px;
+}
+
+header {
+    display: flex;
+}
+
+header a{
+    width: 50px;
+}
+
+.container {
+	max-width: 1000px;
+	margin: 0 auto;
+    height: 1536px;
+    padding: 10px;
+}
+
+.contents {
+	height: 400px;
+	display: flex;
+	margin-top: 60px;
+}
+
+.top-left {
+	display: flex;
+	width: 38%;
+	height: 400px;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.top-right {
+	display: flex;
+	/*width: 49%;*/
+	height: 400px;
+	margin-left: auto;
+}
+
+.top-content {
+	width: 100%;
+	display: flex;
+}
+
+.card {
+	margin-top: 20px;
+}
+
+.card2 {
+	margin-top: 20px;
+	margin-left: 70px;
+}
+
+.card4, .card5 {
+	margin-top: 20px;
+	margin-left: 45px;
+}
+
+.bottom-content{
+	display: flex;
+}
+
+.logo {
+	margin-left: 40px;
+    display: flex;
+    height: 30px;
+    margin-top: 25px;
+}
+
+.middle-img {
+	margin-top: 5%;
+	margin-bottom: 2%;
+	width: 100%;
+}
+
+.contact {
+	margin-top: 5%;
+}
+
+hr {
+	margin-top: 5%;
+	color: black;
+}
+
+footer p {
+	margin: 0 auto;
+	width: 21%
 }
 
 .btn {
-    background-color: white;
+	background-color: white;
     border: 1px solid black;
     color: black;
     padding: 15px 32px;
@@ -135,33 +195,116 @@ nav a {
     font-size: 16px;
 	cursor: pointer;
 	height: 32px;
-	width: 53%;
+	width: 80%;
 	justify-content: center;
-    align-items: center;
-    margin-left: 78%;
+	align-items: center;
 }
 
-hr {
+footer p {
+    margin-top: 10%;
+    width: 203px
+}
+
+/* Tablet */
+
+@media (max-width: 800px) {
+
+    header {
+        display: flex;
+        flex-wrap: wrap;
+
+    }
   
+    header nav {
+        width: 768px;
+        padding: 0 30px;
+        order: 2;
+    }
+
+    header .logo {
+        margin: 30px auto 0;
+        order: 1;
+        margin-bottom: 40px;
+    }
+
+    .contents {
+        margin-top: 0;
+    }
+
+    .top-right {
+        display: none;
+    }
+
+    .top-left {
+        width: 100%;
+    }
+
+    .btn {
+        width: 25%;
+    }
 }
 
-.top-content {
-   margin-top: 20px;
-   display: flex;
-}
+/* Mobile */
 
-h2 {
-    font-size: 2rem;
-}
+@media (max-width: 500px) {
+    .container {
+        padding: 0px;
+    }
 
-.middle-img {
-    width: 100%;
-}
+    header nav {
+        flex-direction: column;
+        padding: 0;
+    }
 
-.card, .card2, .card4, .card5 {
-    font-size: 1.6rem;
-}
+    header nav a {
+        border: 1px solid gray;
+        font-size: 30px;
+        width: 100%;
+        height: 80px;
+        align-items: center;
+    }
 
-.botom-content {
-    display: flex;
+    .btn {
+        width: 50%;
+    }
+    
+    .top-left .index {
+        max-width: 100%;
+        font-size: 80px;
+    }
+
+    .top-content {
+        width: 100%;
+        flex-wrap: wrap;
+        padding: 10px;
+    }
+
+    .card2 {
+        margin-left: 0px;
+    }
+
+    .middle-img {
+        width: 100%;
+    }
+
+    .bottom-content {
+        width: 100%;
+        flex-wrap: wrap;
+        padding: 10px;
+    }
+
+    .card4, .card5 {
+        margin-left: 0px;
+    }
+
+    .contact {
+        padding: 10px;
+    }
+
+    footer p {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        padding: 10px;
+    }
 }
