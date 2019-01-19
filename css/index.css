@@ -109,7 +109,7 @@ header a{
 .container {
 	max-width: 1000px;
 	margin: 0 auto;
-    height: 1536px;
+    height: auto;
     padding: 10px;
 }
 
@@ -130,7 +130,6 @@ header a{
 
 .top-right {
 	display: flex;
-	/*width: 49%;*/
 	height: 400px;
 	margin-left: auto;
 }
